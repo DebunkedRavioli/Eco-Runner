@@ -1,0 +1,149 @@
+# Year 9 Software Design Portfolio
+
+# Identifying and Defining
+
+## 1.1 Identifying a Need
+
+
+Most studemts play games but there are not many that actually teach useful habits which can benefit the environment. My game can fill that gap within the game industry by being a short and fun platformer which gives players practical eco challenges which they can complete in each level to incentivize habits like recycling or energy saving
+
+## Requirements Outline
+* Inputs
+
+     * Game inputs - W,A,S,D and Spacebar
+     * Splash Screen - Level Selection 
+     * Game data - Player Progress,Timers and Background Music
+* Processing
+     
+     * Player movement - RigidBody,Colliders,Death
+     * Level logic - Collectibles and Hazards
+     * Scoring - Calculation
+     * Saving player progress
+* Outputs
+
+     * On Screen graphics, sound effects and music
+     * Level summary screen with a short eco tip
+* Storage
+
+     * Game assets included in the build. 
+
+
+## 1.3 Functional Requirements 
+1. Smooth player movement with responsive controls
+2. One tutorial level and at least three playable levels
+3. Collectibles which affects your score
+4. End of level summary with an educational tip
+5. Pause Menu with settings like Volume and Controls 
+
+## 1.4 Non-Functional Requirements 
+1. Performance of around 40-60 fps 
+2. Easy to learn controls and a guided tutorial 
+3. Clean code structure with organised scripts
+4. Able to run on Windoes and WebGL 
+5. Keyboard only play and readable fonts 
+
+## 1.5 Social and Ethical Issues 
+1. Environmental Accuracy: The facts and eco-tips in the game need to come from reliable sources so players don’t learn incorrect information.
+
+2. The game shouldn’t collect any personal information or share data online. Progress is stored locally only.
+
+3. The game should be enjoyable for everyone without frustrating or unfair mechanics. It should reward learning and curiosity rather than addiction.
+
+4. Controls and visuals should be easy for all players to use and understand, including people with visual or physical difficulties.
+
+5. The goal is to motivate small, real-world actions without guilt or pressure—keeping the tone positive and fun.
+
+# 2 Research and Planning
+
+### 2.1 Evalution of Existing Ideas 
+ 
+| Title / Example | Plus | Minus | Implication |
+|------------------|-------|--------|--------------|
+| **Celeste** | Very responsive controls, fun to play. | Can be hard for beginners. | Focus on easy early levels with smooth controls. |
+| **Overcooked** | Encourages teamwork and time management. | Needs more than one player. | Create single-player teamwork-like challenges. |
+| **Eco (simulation)** | Teaches how actions affect the environment. | Too complicated for short lessons. | Use simple eco tips instead of full simulations. |
+
+## 2.2 Key Design Decisions 
+* Make the controls and tutorials top priority 
+* Keep the levels short 
+* Using pixel art for a clear interface 
+
+# 3. Pseudocode Algorithms 
+
+## 3.1 Player Movement 
+
+BEGIN PlayerMovement
+  
+  READ horizontal_input
+  
+  IF horizontal_input != 0 THEN
+    
+APPLY horizontal_velocity = input * run_speed
+    
+PLAY run_animation
+  
+  ELSE
+
+END PlayerMovement
+
+3.2 Level End & Scoring 
+
+BEGIN LevelEndCheck
+  
+  IF player_reaches_goal OR timer_expires THEN
+    
+CALCULATE score = base + (time_bonus) + (collectible_bonus)
+    
+DISPLAY LevelSummary(score, tips)
+    
+SAVE progress
+  
+  ENDIF
+
+END LevelEndCheck
+
+
+# 4. Flowcharts 
+
+## 4.1 Main Game Loop 
+
+
+
+![alt text](image.png)
+
+
+# 5. UI Storyboards
+
+## 5.1 Main Menu 
+* Title: Eco Runner
+* Buttons: Play|Levels|Settings|Credits
+## 5.2 HUD 
+ * Top-Left: Level name
+ * Top Right: Timer and Score
+ * Bottom-Left: Lives/Health
+ * Bottom-Right: Tip icon for quick hints 
+## 5.3 Level Summary 
+* Score and stars earned
+* Short environmental tip 
+* Buttons: Retry|Next Level|Main Menu
+
+# 6 Gantt Chart
+| Week | Dates           | Tasks                                          |
+| ---: | --------------- | ---------------------------------------------- |
+|    1 | Nov 4 – Nov 10  | Research, requirements, and tutorial prototype |
+|    2 | Nov 11 – Nov 17 | Player controls, physics, HUD, Level 1         |
+|    3 | Nov 18 – Nov 24 | Add collectibles, scoring, Level 2             |
+|    4 | Nov 25 – Dec 1  | Design Level 3, add menus, save/load           |
+|    5 | Dec 2 – Dec 8   | Playtesting, bug fixes, accessibility tweaks   |;;;POLLLL
+|    6 | Dec 9 – Dec 15  | Final polish and submission prep               |
+
+# 7. Deliverables Checklist
+
+ 1. Unity project folder
+ 
+ 2. Video demonstration
+ 
+ 3. Developer portfolio (Markdown file)
+ 4. GitHub repo with all images and project files
+
+# 8. 
